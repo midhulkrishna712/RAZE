@@ -265,29 +265,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function sendNotification() {
-        const serviceID = 'default_service';
-        const templateID = 'template_raze';
-
-        const templateParams = {
-            visitor_name: userData.name,
-            visitor_age: userData.age,
-            visitor_location: userData.location,
-            visitor_email: userData.email,
-            visitor_grievance: userData.grievance,
-            date_time: new Date().toLocaleString()
+        const payload = {
+            name: userData.name,
+            age: userData.age,
+            location: userData.location,
+            email: userData.email,
+            grievance: userData.grievance,
+            dateTime: new Date().toLocaleString()
         };
 
-        console.log("Attempting to send email notification with data:", templateParams);
-
-        // Uncomment below to actually send emails once EmailJS is set up
-        /*
-        emailjs.send(serviceID, templateID, templateParams)
-            .then(() => {
-                console.log('SUCCESS! Email sent.');
-            }, (err) => {
-                console.error('FAILED to send email...', err);
-            });
-        */
+        fetch('/.netlify/functions/send-email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                console.log('✅ Email sent successfully!');
+                razeSpeak("🔥 Signal fire received! I've logged your distress call. Hang tight — the shadows don't stand a chance.");
+            } else {
+                console.error('❌ Email failed:', data.message);
+                razeSpeak("Hmm, the signal got jammed. Don't worry — try again later or reach out directly.");
+            }
+        })
+        .catch(err => {
+            console.error('❌ Network error:', err);
+            razeSpeak("Looks like the shadows are interfering with the signal. Please try again in a moment.");
+        });
     }
 
     // ============================================================
