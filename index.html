@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raze - The Guardian of the Livings | Superhero Help Portal</title>
+    <meta name="description" content="Raze, the Guardian of the Livings, protects the living from the darker side of the world. Reach out for help today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- EmailJS script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+       })();
+    </script>
+</head>
+<body>
+    <!-- Floating particles background -->
+    <div id="particles-container"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon">🔥</span>
+                <span class="logo-text">RAZE</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#origin" class="nav-link">Origin</a></li>
+                <li><a href="#powers" class="nav-link">Powers</a></li>
+                <li><a href="#mission" class="nav-link">Mission</a></li>
+                <li><a href="#personality" class="nav-link">Personality</a></li>
+            </ul>
+            <button id="summon-nexus-btn" class="nav-cta">Ask For Help</button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="app">
+        <!-- ========== HERO SECTION ========== -->
+        <section id="hero" class="section hero-section">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <div class="hero-badge">🔥 The Guardian of the Livings</div>
+                    <h1 class="hero-title">
+                        <span class="hero-title-line">Meet</span>
+                        <span class="hero-title-name">RAZE</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        A fearless warrior with an unbreakable will and a blazing fist. Born from the shadows, 
+                        he chose the light—and now stands as the last line of defense between the living and the darker forces that lurk in the world.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Lives Saved</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-number">Gear 5</span>
+                            <span class="stat-label">Max Form</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">Defeats</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" id="hero-cta-btn">
+                            <span>Summon Raze</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                        <a href="#origin" class="btn btn-outline">
+                            <span>Read Origin Story</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- ========== ORIGIN STORY ========== -->
+        <section id="origin" class="section origin-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">The Beginning</span>
+                    <h2 class="section-title">Origin Story</h2>
+                </div>
+                <div class="origin-content">
+                    <div class="origin-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">🌑</div>
+                            <div class="timeline-card">
+                                <h3>Born in the Shadows</h3>
+                                <p>In the darkest corner of a war-torn realm, a boy was born during a lunar eclipse. Abandoned at birth, he was raised by outcasts and drifters who taught him one thing: the world is cruel, but the cruel don't have to win. He carried a blazing spirit—a symbol of the hope he refused to let go.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">💥</div>
+                            <div class="timeline-card">
+                                <h3>The Forbidden Fruit</h3>
+                                <p>At fourteen, Raze accidentally consumed the Blaze-Blaze Fruit—a legendary artifact hidden by dark warlords. His body transformed, gaining the ability to stretch beyond human limits and ignite his fists with a spiritual fire fueled by his willpower. The darker forces tried to capture him. They failed.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">🦸</div>
+                            <div class="timeline-card">
+                                <h3>The Guardian Rises</h3>
+                                <p>Now a relentless force of nature, Raze roams the world with a single promise: no one suffers alone. He hunts the shadow syndicates, dismantles corruption, and fights the monsters that normal people can't see. His glowing fist is now a beacon—when people see it, they know the darkness is about to be shattered.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== POWERS & ABILITIES ========== -->
+        <section id="powers" class="section powers-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Abilities</span>
+                    <h2 class="section-title">Powers & Abilities</h2>
+                    <p class="section-desc">Forged in shadow, unleashed in fire. Every power fueled by pure willpower.</p>
+                </div>
+                <div class="powers-grid">
+                    <div class="power-card power-card-featured">
+                        <div class="power-card-icon">🔥</div>
+                        <h3>Blaze Fist</h3>
+                        <p>Raze's signature attack. By channeling his spiritual energy, he ignites his fists with an unstoppable crimson fire that can shatter any darkness and obliterate evil constructs on contact.</p>
+                        <div class="power-level">
+                            <span>Power Level</span>
+                            <div class="power-bar"><div class="power-bar-fill" style="width: 98%"></div></div>
+                        </div>
+                    </div>
+                    <div class="power-card">
+                        <div class="power-card-icon">🦾</div>
+                        <h3>Rubber Body</h3>
+                        <p>After consuming the Blaze-Blaze Fruit, Raze's body became infinitely elastic. He can stretch his limbs across impossible distances, absorb impacts, and deliver devastating long-range punches.</p>
+                        <div class="power-level">
+                            <span>Power Level</span>
+                            <div class="power-bar"><div class="power-bar-fill" style="width: 92%"></div></div>
+                        </div>
+                    </div>
+                    <div class="power-card">
+                        <div class="power-card-icon">👁️</div>
+                        <h3>Shadow Sight</h3>
+                        <p>Raze can perceive the "Dark Threads"—invisible strands of malice connecting shadow creatures to their source. This lets him track evil to its root and destroy it permanently.</p>
+                        <div class="power-level">
+                            <span>Power Level</span>
+                            <div class="power-bar"><div class="power-bar-fill" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                    <div class="power-card">
+                        <div class="power-card-icon">⚡</div>
+                        <h3>Conqueror's Will</h3>
+                        <p>An overwhelming spiritual pressure that Raze can unleash from sheer willpower alone. Weaker shadow creatures disintegrate instantly, and even the strongest foes are brought to their knees.</p>
+                        <div class="power-level">
+                            <span>Power Level</span>
+                            <div class="power-bar"><div class="power-bar-fill" style="width: 95%"></div></div>
+                        </div>
+                    </div>
+                    <div class="power-card">
+                        <div class="power-card-icon">🌀</div>
+                        <h3>Gear Overdrive</h3>
+                        <p>Raze can push his body beyond its natural limits, entering "Gear" states that multiply his speed, power, and fire intensity exponentially. Gear 5 transforms him into a living inferno.</p>
+                        <div class="power-level">
+                            <span>Power Level</span>
+                            <div class="power-bar"><div class="power-bar-fill" style="width: 100%"></div></div>
+                        </div>
+                    </div>
+                    <div class="power-card">
+                        <div class="power-card-icon">🛡️</div>
+                        <h3>Iron Spirit Armor</h3>
+                        <p>By hardening his spiritual energy, Raze can coat his body in an invisible armor that deflects dark magic, curses, and physical attacks. The stronger his resolve, the harder the armor.</p>
+                        <div class="power-level">
+                            <span>Power Level</span>
+                            <div class="power-bar"><div class="power-bar-fill" style="width: 88%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== MISSION ========== -->
+        <section id="mission" class="section mission-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Purpose</span>
+                    <h2 class="section-title">The Mission</h2>
+                </div>
+                <div class="mission-content">
+                    <div class="mission-quote">
+                        <blockquote>
+                            "As long as one living heart is still beating, darkness hasn't won."
+                        </blockquote>
+                        <cite>— Raze</cite>
+                    </div>
+                    <div class="mission-cards">
+                        <div class="mission-card">
+                            <div class="mission-card-number">01</div>
+                            <h3>Shatter the Darkness</h3>
+                            <p>To hunt down and destroy every shadow syndicate, dark entity, and corrupt force that preys on the innocent. No shadow is safe when Raze is on the hunt.</p>
+                        </div>
+                        <div class="mission-card">
+                            <div class="mission-card-number">02</div>
+                            <h3>Protect the Weak</h3>
+                            <p>To be the shield that stands between ordinary people and the horrors they can't fight alone. Every life matters, and no cry for help goes unanswered.</p>
+                        </div>
+                        <div class="mission-card">
+                            <div class="mission-card-number">03</div>
+                            <h3>Ignite Hope</h3>
+                            <p>To show the world that even in the deepest darkness, one burning flame is enough to light the way. Raze's fire isn't just destruction—it's hope made visible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PERSONALITY ========== -->
+        <section id="personality" class="section personality-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Character</span>
+                    <h2 class="section-title">Personality & Identity</h2>
+                </div>
+                <div class="personality-content">
+                    <div class="trait-grid">
+                        <div class="trait-card">
+                            <div class="trait-emoji">😁</div>
+                            <h3>Fearlessly Carefree</h3>
+                            <p>Raze laughs in the face of danger—literally. His goofy, carefree nature disarms allies and enemies alike, hiding a terrifyingly sharp battle instinct.</p>
+                        </div>
+                        <div class="trait-card">
+                            <div class="trait-emoji">🤝</div>
+                            <h3>Unshakable Loyalty</h3>
+                            <p>Once you earn Raze's trust, he will walk through fire, darkness, and death itself to protect you. His bonds are his greatest strength.</p>
+                        </div>
+                        <div class="trait-card">
+                            <div class="trait-emoji">🍖</div>
+                            <h3>Insatiable Appetite</h3>
+                            <p>Whether it's food or adventure, Raze can never get enough. He's powered by an endless hunger—for meat, for justice, and for freedom.</p>
+                        </div>
+                        <div class="trait-card">
+                            <div class="trait-emoji">💪</div>
+                            <h3>Unbreakable Will</h3>
+                            <p>No matter how many times he's knocked down, Raze gets back up. His willpower is his ultimate weapon—it fuels his fire and terrifies the darkness.</p>
+                        </div>
+                    </div>
+                    <div class="identity-card">
+                        <h3>Secret Identity</h3>
+                        <p>By day, Raze is just a wandering traveler who drifts from town to town, taking odd jobs and eating at every food stall he finds. People know him as the <strong>"Blazing Drifter"</strong>—a cheerful, harmless guy who can't seem to sit still. But when the shadows creep in and the darkness rises, his fiery aura becomes a war banner, and the grinning drifter transforms into the most feared guardian the dark world has ever known.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CALL TO ACTION ========== -->
+        <section id="cta" class="section cta-section">
+            <div class="section-container">
+                <div class="cta-content">
+                    <div class="cta-glow"></div>
+                    <h2 class="cta-title">Need Help?</h2>
+                    <p class="cta-desc">If the darkness is closing in and you have nowhere to turn, call upon Raze. No problem is too dangerous, no enemy too powerful. He's fought the shadows before—and he's never lost. All you have to do is ask.</p>
+                    <button class="btn btn-primary btn-lg" id="cta-summon-btn">
+                        <span>Summon Raze Now</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <span class="logo-icon">🔥</span>
+                    <span class="logo-text">RAZE</span>
+                </div>
+                <p class="footer-text">The Guardian of the Livings &mdash; Shattering darkness, one fist at a time.</p>
+                <p class="footer-copy">&copy; 2026 Raze. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Chatbot Overlay -->
+        <div id="chatbot-overlay" class="hidden">
+            <div class="chatbot-container">
+                <div class="chatbot-header">
+                    <div class="chatbot-title">
+                        <div class="status-indicator"></div>
+                        <span>Raze's Signal Fire</span>
+                    </div>
+                    <button id="close-chatbot" class="close-btn">&times;</button>
+                </div>
+                <div id="chat-window" class="chat-window">
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off">
+                    <button id="send-btn" class="send-btn">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
