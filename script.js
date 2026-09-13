@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dateTime: new Date().toLocaleString()
         };
 
-        fetch('/.netlify/functions/send-email', {
+        fetch('/api/send-email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
